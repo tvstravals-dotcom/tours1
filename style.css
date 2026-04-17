@@ -1036,9 +1036,9 @@ input, select, textarea { font-family: var(--font); }
 .footer-top { padding: 70px 0 50px; }
 .footer-grid { display: grid; grid-template-columns: 1.2fr 1.3fr 1fr 1fr; gap: 40px; }
 .footer-policy { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-.footer-policy li { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
-.footer-policy li i { color: var(--primary-light); font-size: 0.75rem; margin-right: 6px; }
-.footer-policy li strong { color: #fff; display: block; font-size: 0.85rem; margin-bottom: 2px; }
+.footer-policy li { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 12px; }
+.footer-policy li i { color: var(--primary-light); font-size: 0.85rem; margin-right: 8px; }
+.footer-policy li strong { color: #fff; font-size: 0.9rem; font-weight: 700; margin-right: 4px; display: inline; }
 .footer-brand p { font-size: 0.88rem; line-height: 1.7; margin: 16px 0 22px; color: rgba(255,255,255,0.6); }
 .footer-logo .logo-main, .footer-logo .logo-sub { color: rgba(255,255,255,0.95); }
 .footer-social { display: flex; gap: 10px; }
