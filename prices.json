@@ -45,8 +45,8 @@
     "image": "./images/fleet/21_seater_coach_a_c.png"
   },
   {
-    "name": "21 Seater Coach A/C",
+    "name": "21 Seater Coach non A/C",
     "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 5500/-\nFuel Charge Per km : ₹25/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹31/-\nDriver Betta : ₹500/-",
-    "image": "./images/fleet/21_seater_coach_a_c.png"
+    "image": "./images/fleet/21_seater_coach_non_a_c.png"
   }
 ]
