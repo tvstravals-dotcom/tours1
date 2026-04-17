@@ -1,0 +1,33 @@
+name: Fetch Latest Notion Prices
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-js: '16'
+
+    - name: Fetch Pricing Data
+      env:
+        NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+      run: |
+        node fetch-pricing.js
+
+    - name: Commit and Push changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add prices.json prices.js images/fleet/*.png
+        git commit -m "Update live pricing from Notion [skip ci]" || echo "No changes to commit"
+        git push

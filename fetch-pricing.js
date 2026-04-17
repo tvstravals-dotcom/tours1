@@ -2,7 +2,7 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const NOTION_API_KEY = "YOUR_API_KEY";
+const NOTION_API_KEY = process.env.NOTION_API_KEY || "";
 const DATABASE_ID = "e899e308df1642d8828b457aac3e9cbf";
 const IMG_DIR = path.join(__dirname, 'images', 'fleet');
 
@@ -81,6 +81,15 @@ const req = https.request(options, (res) => {
             
           cleanData.push({ name, details: slugText, image: localImagePath });
         }
+        
+        // Sort by price (extract number from "Rent Per Day :  ₹ 1600/-")
+        cleanData.sort((a, b) => {
+          const getPrice = (str) => {
+            const match = str.match(/Rent Per Day\s*:\s*(?:₹|Rs\.?)\s*(\d+)/i);
+            return match ? parseInt(match[1]) : 0;
+          };
+          return getPrice(a.details) - getPrice(b.details);
+        });
         
         fs.writeFileSync('prices.json', JSON.stringify(cleanData, null, 2));
         fs.writeFileSync('prices.js', 'window.LIVE_PRICES = ' + JSON.stringify(cleanData, null, 2) + ';');
