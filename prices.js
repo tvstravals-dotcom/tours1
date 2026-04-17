@@ -1,13 +1,13 @@
 window.LIVE_PRICES = [
   {
-    "name": "Mini",
-    "details": "Below 250 km (Per Day)\nRent Per Day :  ₹ 1500/-\nFuel Charge Per km : ₹8/-\n\nAbove 250 km (Per Day)\nPer Day km : ₹11/-\nDriver Betta : ₹200/-",
-    "image": "./images/fleet/mini.png"
+    "name": "21 Seater Coach A/C",
+    "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 3600/-\nFuel Charge Per km : ₹17/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹24/-\nDriver Betta : ₹500/-",
+    "image": "./images/fleet/21_seater_coach_a_c.png"
   },
   {
-    "name": "Sedan",
-    "details": "\nBelow 250 km (Per Day)\nRent Per Day :  ₹ 1500/-\nFuel Charge Per km : ₹9/-\n\nAbove 250 km (Per Day)\nPer Day km : ₹11/-\nDriver Betta : ₹200/-",
-    "image": "./images/fleet/sedan.png"
+    "name": "21 Seater Coach A/C",
+    "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 5500/-\nFuel Charge Per km : ₹25/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹31/-\nDriver Betta : ₹500/-",
+    "image": "./images/fleet/21_seater_coach_a_c.png"
   },
   {
     "name": "Etios",
@@ -15,14 +15,14 @@ window.LIVE_PRICES = [
     "image": "./images/fleet/etios.png"
   },
   {
-    "name": "SUV(Tavera  non A/C)",
-    "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 1800/-\nFuel Charge Per km : ₹10/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹16/-\nDriver Betta : ₹400/-",
-    "image": "./images/fleet/suv_tavera__non_a_c_.png"
+    "name": "Mini",
+    "details": "\nBelow 250 km (Per Day)\nRent Per Day :  ₹ 1500/-\nFuel Charge Per km : ₹8/-\n\nAbove 250 km (Per Day)\nPer Day km : ₹11/-\nDriver Betta : ₹200/-",
+    "image": "./images/fleet/mini.png"
   },
   {
-    "name": "SUV(Tavera A/C)",
-    "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 1800/-\nFuel Charge Per km : ₹11/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹16/-\nDriver Betta : ₹400/-",
-    "image": "./images/fleet/suv_tavera_a_c_.png"
+    "name": "Sedan",
+    "details": "Below 250 km (Per Day)\nRent Per Day :  ₹ 1500/-\nFuel Charge Per km : ₹9/-\n\nAbove 250 km (Per Day)\nPer Day km : ₹11/-\nDriver Betta : ₹200/-",
+    "image": "./images/fleet/sedan.png"
   },
   {
     "name": "SUV (Innova A/C)",
@@ -35,18 +35,18 @@ window.LIVE_PRICES = [
     "image": "./images/fleet/suv__innova_crysta_.png"
   },
   {
+    "name": "SUV(Tavera  non A/C)",
+    "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 1800/-\nFuel Charge Per km : ₹10/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹16/-\nDriver Betta : ₹400/-",
+    "image": "./images/fleet/suv_tavera__non_a_c_.png"
+  },
+  {
+    "name": "SUV(Tavera A/C)",
+    "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 1800/-\nFuel Charge Per km : ₹11/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹16/-\nDriver Betta : ₹400/-",
+    "image": "./images/fleet/suv_tavera_a_c_.png"
+  },
+  {
     "name": "Tempo",
     "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 2600/-\nFuel Charge Per km : ₹16/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹21/-\nDriver Betta : ₹500/-",
     "image": "./images/fleet/tempo.png"
-  },
-  {
-    "name": "21 Seater Coach A/C",
-    "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 3600/-\nFuel Charge Per km : ₹17/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹24/-\nDriver Betta : ₹500/-",
-    "image": "./images/fleet/21_seater_coach_a_c.png"
-  },
-  {
-    "name": "21 Seater Coach A/C",
-    "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 5500/-\nFuel Charge Per km : ₹25/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹31/-\nDriver Betta : ₹500/-",
-    "image": "./images/fleet/21_seater_coach_a_c.png"
   }
 ];
