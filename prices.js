@@ -1,5 +1,10 @@
 window.LIVE_PRICES = [
   {
+    "name": "Unknown Vehicle",
+    "details": "",
+    "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=500&q=80"
+  },
+  {
     "name": "Mini",
     "details": "\nBelow 250 km (Per Day)\nRent Per Day :  ₹ 1500/-\nFuel Charge Per km : ₹8/-\n\nAbove 250 km (Per Day)\nPer Day km : ₹11/-\nDriver Betta : ₹200/-",
     "image": "./images/fleet/mini.png"
