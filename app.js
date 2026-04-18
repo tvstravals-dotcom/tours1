@@ -371,3 +371,35 @@ style.textContent = `@keyframes fadeIn { to { opacity: 1; } }`;
 document.head.appendChild(style);
 
 loadLivePricing();
+// ---- CARD SLIDER LOGIC ----
+function initCardSliders() {
+  const sliders = document.querySelectorAll('.card-slider');
+  sliders.forEach(slider => {
+    const slides = slider.querySelectorAll('.card-slide');
+    const prevBtn = slider.querySelector('.prev');
+    const nextBtn = slider.querySelector('.next');
+    let current = 0;
+
+    if (!slides.length) return;
+
+    function showSlide(index) {
+      slides[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+    }
+
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showSlide(current + 1);
+    });
+
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showSlide(current - 1);
+    });
+    
+    // Auto-play option
+    setInterval(() => showSlide(current + 1), 6000 + Math.random() * 2000);
+  });
+}
+initCardSliders();
