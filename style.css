@@ -649,7 +649,7 @@ input, select, textarea { font-family: var(--font); }
   position: relative;
   display: block;
 }
-.card-slider { position: relative; overflow: hidden; height: 100% !important; }
+.card-slider { position: relative; overflow: hidden; }
 .card-slide {
   position: absolute;
   top: 0; left: 0;
