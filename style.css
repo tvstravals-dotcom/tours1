@@ -2210,3 +2210,134 @@ textarea {
 .hero-slide-controls {
   display: none;
 }
+
+/* =============================================
+   DESTINATION SHOWCASE SECTIONS
+   ============================================= */
+.dest-showcase {
+  padding: 0 0 100px 0;
+  overflow: hidden;
+}
+
+.dest-hero {
+  height: 60vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.dest-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.7));
+}
+
+.dest-hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  padding: 0 20px;
+}
+
+.dest-hero-content .section-tag {
+  background: var(--secondary);
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.dest-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.dest-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dest-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.dest-text h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 24px;
+}
+
+.dest-text p {
+  color: var(--text-medium);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.dest-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.dest-highlights span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.dest-highlights span i {
+  color: var(--secondary);
+}
+
+.dest-gallery {
+  position: relative;
+}
+
+.gallery-mosaic {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+  cursor: zoom-in;
+  border: 1px solid var(--border);
+}
+
+.gallery-mosaic:hover {
+  transform: scale(1.02);
+}
+
+.mt-60 { margin-top: 60px; }
+.mt-30 { margin-top: 30px; }
+
+@media (max-width: 968px) {
+  .dest-info-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .dest-hero {
+    height: 40vh;
+  }
+  .dest-title {
+    font-size: 2.5rem;
+  }
+}
