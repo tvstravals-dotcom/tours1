@@ -342,10 +342,12 @@ async function loadLivePricing() {
         data = freshData;
         console.log("✅ SUCCESS: Loaded fresh data from Notion CMS.");
       } else {
-        console.log("⚠️ WARNING: Notion returned empty data.");
+        const errorDetail = await response.json().catch(() => ({}));
+        console.log("⚠️ WARNING: Notion returned empty data or error:", errorDetail);
       }
     } else {
-      console.log("❌ ERROR: API route returned status " + response.status);
+      const errorDetail = await response.json().catch(() => ({}));
+      console.log("❌ ERROR: API failed with status " + response.status, errorDetail);
     }
   } catch (err) {
     console.log("❌ ERROR: Live fetch failed entirely (Check Vercel API).", err);

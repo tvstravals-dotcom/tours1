@@ -22,7 +22,11 @@ export default function handler(req, res) {
       try {
         const payload = JSON.parse(Buffer.concat(chunks).toString());
         if (!payload.results) {
-          return res.status(500).json({ error: "No results from Notion" });
+          return res.status(notionRes.statusCode || 500).json({ 
+            error: "Notion API Error", 
+            message: payload.message || "Unknown error",
+            code: payload.code || "unknown"
+          });
         }
 
         const cleanData = payload.results.map(page => {
