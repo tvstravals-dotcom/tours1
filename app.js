@@ -14,6 +14,8 @@ window.addEventListener("scroll", () => {
 });
 
 // ---- MOBILE HAMBURGER ----
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
 const navOverlay = document.getElementById("nav-overlay");
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("open");
