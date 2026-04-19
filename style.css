@@ -2067,25 +2067,22 @@ textarea {
   .nav-links {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -320px;
     bottom: 0;
     width: 300px;
-    background: rgba(15, 23, 42, 0.98); /* Deep Midnight Blue */
-    backdrop-filter: blur(15px);
+    background: #0f172a; /* Solid Midnight Blue */
     flex-direction: column;
     padding: 110px 40px 40px;
-    gap: 5px;
+    gap: 0;
     box-shadow: -15px 0 45px rgba(0, 0, 0, 0.4);
-    transform: translateX(100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 999;
-  }
-  .nav-links.open {
-    transform: translateX(0);
+    transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2000; /* Higher than everything */
     opacity: 1;
     pointer-events: all;
+    display: flex !important;
+  }
+  .nav-links.open {
+    right: 0;
   }
   .nav-link {
     padding: 16px 0;
@@ -2093,12 +2090,14 @@ textarea {
     font-size: 1.15rem;
     font-weight: 600;
     width: 100%;
-    color: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.9) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   .nav-link::after {
     display: none;
@@ -2181,9 +2180,9 @@ textarea {
   .nav-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(4px);
-    z-index: 998;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 1500;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
