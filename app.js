@@ -330,8 +330,23 @@ console.log(
 );
 
 // ---- LOAD PRICING FROM Live Database ----
-function loadLivePricing() {
-  const data = window.LIVE_PRICES;
+async function loadLivePricing() {
+  let data = window.LIVE_PRICES;
+
+  // Try to fetch real-time data from Vercel Serverless Function
+  try {
+    const response = await fetch('/api/get-prices');
+    if (response.ok) {
+      const freshData = await response.json();
+      if (Array.isArray(freshData) && freshData.length > 0) {
+        data = freshData;
+        console.log("Loaded fresh data from Notion CMS.");
+      }
+    }
+  } catch (err) {
+    console.log("Live fetch unavailable, using background data.", err);
+  }
+
   if (!data || !Array.isArray(data)) {
     console.log(
       "Using fallback static UI prices. No Live Database data found.",
