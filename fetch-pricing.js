@@ -2,7 +2,8 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const NOTION_API_KEY = process.env.NOTION_API_KEY || "";
+const NOTION_API_KEY_ENV = process.env.NOTION_API_KEY || (fs.existsSync('.env') ? fs.readFileSync('.env', 'utf8').split('\n').find(l => l.startsWith('NOTION_API_KEY=')).split('=')[1].trim() : "");
+const NOTION_API_KEY = NOTION_API_KEY_ENV;
 const DATABASE_ID = "e899e308df1642d8828b457aac3e9cbf";
 const IMG_DIR = path.join(__dirname, 'images', 'fleet');
 
