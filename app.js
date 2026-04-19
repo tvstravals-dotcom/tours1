@@ -14,18 +14,28 @@ window.addEventListener("scroll", () => {
 });
 
 // ---- MOBILE HAMBURGER ----
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("nav-links");
+const navOverlay = document.getElementById("nav-overlay");
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("open");
   navLinks.classList.toggle("open");
+  navOverlay.classList.toggle("open");
+  document.body.classList.toggle("menu-open");
 });
 // Close menu on nav link click
 document.querySelectorAll(".nav-link, .nav-btn").forEach((link) => {
   link.addEventListener("click", () => {
     hamburger.classList.remove("open");
     navLinks.classList.remove("open");
+    navOverlay.classList.remove("open");
+    document.body.classList.remove("menu-open");
   });
+});
+// Close menu on overlay click
+navOverlay.addEventListener("click", () => {
+  hamburger.classList.remove("open");
+  navLinks.classList.remove("open");
+  navOverlay.classList.remove("open");
+  document.body.classList.remove("menu-open");
 });
 
 // ---- ACTIVE NAV LINK ----
