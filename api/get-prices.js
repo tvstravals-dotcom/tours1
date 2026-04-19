@@ -3,6 +3,14 @@ const https = require('https');
 export default function handler(req, res) {
   const NOTION_API_KEY = process.env.NOTION_API_KEY;
   const DATABASE_ID = "e899e308df1642d8828b457aac3e9cbf";
+  
+  if (!NOTION_API_KEY) {
+    return res.status(401).json({ 
+      error: "Vercel Configuration Error", 
+      message: "The NOTION_API_KEY is missing in Vercel Environment Variables.",
+      status: "MISSING"
+    });
+  }
 
   const options = {
     hostname: 'api.notion.com',
