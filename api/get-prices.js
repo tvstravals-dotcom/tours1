@@ -45,7 +45,6 @@ export default function handler(req, res) {
           return getPrice(a.details) - getPrice(b.details);
         });
 
-        res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate');
         res.status(200).json(cleanData);
       } catch (e) {
         res.status(500).json({ error: "Parsing error" });
