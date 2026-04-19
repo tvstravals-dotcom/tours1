@@ -2094,10 +2094,18 @@ textarea {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     text-align: left;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 15px;
     visibility: visible !important;
     opacity: 1 !important;
+  }
+  .nav-link i {
+    font-size: 1.1rem;
+    width: 24px;
+    text-align: center;
+    color: var(--secondary);
+    opacity: 1;
   }
   .nav-link::after {
     display: none;
@@ -2106,10 +2114,6 @@ textarea {
   .nav-link:hover {
     color: var(--secondary);
     background: transparent;
-  }
-  .nav-link i {
-    font-size: 0.9rem;
-    opacity: 0.5;
   }
   .nav-btn {
     margin-top: 30px;
