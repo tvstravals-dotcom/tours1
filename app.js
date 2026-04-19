@@ -340,11 +340,15 @@ async function loadLivePricing() {
       const freshData = await response.json();
       if (Array.isArray(freshData) && freshData.length > 0) {
         data = freshData;
-        console.log("Loaded fresh data from Notion CMS.");
+        console.log("✅ SUCCESS: Loaded fresh data from Notion CMS.");
+      } else {
+        console.log("⚠️ WARNING: Notion returned empty data.");
       }
+    } else {
+      console.log("❌ ERROR: API route returned status " + response.status);
     }
   } catch (err) {
-    console.log("Live fetch unavailable, using background data.", err);
+    console.log("❌ ERROR: Live fetch failed entirely (Check Vercel API).", err);
   }
 
   if (!data || !Array.isArray(data)) {
