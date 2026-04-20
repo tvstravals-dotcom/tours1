@@ -41,6 +41,7 @@ export default function handler(req, res) {
           const name = page.properties.Name?.title?.[0]?.plain_text || "Unnamed";
           const details = (page.properties.Slug?.rich_text || []).map(t => t.plain_text).join(' ');
           const imgFiles = page.properties.Image?.files || [];
+          
           let image = 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=500&q=80';
           if (imgFiles.length > 0) {
             image = imgFiles[0].file?.url || imgFiles[0].external?.url || image;
@@ -48,13 +49,28 @@ export default function handler(req, res) {
           return { name, details, image };
         });
 
-        // Price Sort
+        // --- MANDATORY CUSTOM ORDER ---
+        const userOrder = [
+          "Mini",
+          "Sedan",
+          "SUV (Tavera A/C)",
+          "SUV(Tavera A/C)",
+          "SUV (Innova A/C)",
+          "SUV (Innova Crysta)",
+          "Tempo 14 seater",
+          "Tempo 18 seater",
+          "21 Seater 407 Coach A/C",
+          "21  Seater 407 Coach A/C",
+          "21 Seater Coach non A/C"
+        ];
+
         cleanData.sort((a, b) => {
-          const getPrice = (str) => {
-            const match = str.match(/Rent Per Day\s*:\s*(?:₹|Rs\.?)\s*(\d+)/i);
-            return match ? parseInt(match[1]) : 0;
-          };
-          return getPrice(a.details) - getPrice(b.details);
+          const normalize = (s) => s.replace(/\s+/g, '').toLowerCase();
+          let indexA = userOrder.findIndex(n => normalize(n) === normalize(a.name));
+          let indexB = userOrder.findIndex(n => normalize(n) === normalize(b.name));
+          if (indexA === -1) indexA = 999;
+          if (indexB === -1) indexB = 999;
+          return indexA - indexB;
         });
 
         res.status(200).json(cleanData);
@@ -65,6 +81,6 @@ export default function handler(req, res) {
   });
 
   notionReq.on('error', (e) => res.status(500).json({ error: e.message }));
-  notionReq.write(JSON.stringify({ sorts: [{ property: 'Name', direction: 'ascending' }] }));
+  notionReq.write(JSON.stringify({}));
   notionReq.end();
 }

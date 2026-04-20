@@ -665,10 +665,11 @@ textarea {
    QUICK BOOKING BAR
    ============================================= */
 .quick-book {
-  background: var(--secondary);
+  background: var(--primary);
   padding: 30px 0;
   position: relative;
   z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .quick-book-grid {
   display: grid;
@@ -686,7 +687,7 @@ textarea {
   padding: 14px 16px;
 }
 .quick-item > i {
-  color: var(--primary);
+  color: var(--secondary);
   font-size: 1.1rem;
   flex-shrink: 0;
 }
@@ -697,7 +698,7 @@ textarea {
 .quick-item label {
   display: block;
   font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 4px;
@@ -714,15 +715,24 @@ textarea {
   padding: 0;
 }
 .quick-item select option {
-  background: var(--secondary);
+  background: var(--primary);
   color: #fff;
 }
 .quick-item input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.6);
 }
 .book-now-btn {
   white-space: nowrap;
   padding: 16px 28px;
+  background: var(--secondary);
+  color: var(--primary);
+  font-weight: 700;
+}
+.book-now-btn:hover {
+  background: #fff;
+  color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
 }
 
 /* =============================================

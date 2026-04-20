@@ -31,17 +31,17 @@
   },
   {
     "name": "Tempo 18 seater",
-    "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 2600/-\nFuel Charge Per km : ₹16/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹22/-\nDriver Betta : ₹500/-",
+    "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 4500/-\nFuel Charge Per km : ₹20/-\n\nAbove 250 km (Per Day)\nPer Day km : ₹20/-\nDriver Betta : ₹500/-",
     "image": "./images/fleet/tempo_18_seater.png"
-  },
-  {
-    "name": "21 Seater Coach non A/C",
-    "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 4500/-\nFuel Charge Per km : ₹20/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹30/-\nDriver Betta : ₹1000/-",
-    "image": "./images/fleet/21_seater_coach_non_a_c.png"
   },
   {
     "name": "21  Seater 407 Coach A/C",
     "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 5500/-\nFuel Charge Per km : ₹25/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹35/-\nDriver Betta : ₹1000/-",
     "image": "./images/fleet/21__seater_407_coach_a_c.png"
+  },
+  {
+    "name": "21 Seater Coach non A/C",
+    "details": "\nBelow 300 km (Per Day)\nRent Per Day :  ₹ 4500/-\nFuel Charge Per km : ₹20/-\n\nAbove 300 km (Per Day)\nPer Day km : ₹30/-\nDriver Betta : ₹1000/-",
+    "image": "./images/fleet/21_seater_coach_non_a_c.png"
   }
 ]

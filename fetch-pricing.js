@@ -77,7 +77,7 @@ const req = https.request(options, (res) => {
           
           if (imgUrl) {
             const destPath = path.join(IMG_DIR, `${safeName}.png`);
-            console.log(`Downloading image for ${name}...`);
+            console.log(`Downloading original Notion image for ${name}...`);
             await downloadImage(imgUrl, destPath);
             localImagePath = `./images/fleet/${safeName}.png`;
           }
@@ -85,18 +85,33 @@ const req = https.request(options, (res) => {
           cleanData.push({ name, details: slugText, image: localImagePath });
         }
         
-        // Sort by price (extract number from "Rent Per Day :  ₹ 1600/-")
+        // --- MANDATORY CUSTOM ORDER ---
+        const userOrder = [
+          "Mini",
+          "Sedan",
+          "SUV (Tavera A/C)",
+          "SUV(Tavera A/C)",
+          "SUV (Innova A/C)",
+          "SUV (Innova Crysta)",
+          "Tempo 14 seater",
+          "Tempo 18 seater",
+          "21 Seater 407 Coach A/C",
+          "21  Seater 407 Coach A/C",
+          "21 Seater Coach non A/C"
+        ];
+
         cleanData.sort((a, b) => {
-          const getPrice = (str) => {
-            const match = str.match(/Rent Per Day\s*:\s*(?:₹|Rs\.?)\s*(\d+)/i);
-            return match ? parseInt(match[1]) : 0;
-          };
-          return getPrice(a.details) - getPrice(b.details);
+          const normalize = (s) => s.replace(/\s+/g, '').toLowerCase();
+          let indexA = userOrder.findIndex(n => normalize(n) === normalize(a.name));
+          let indexB = userOrder.findIndex(n => normalize(n) === normalize(b.name));
+          if (indexA === -1) indexA = 999;
+          if (indexB === -1) indexB = 999;
+          return indexA - indexB;
         });
-        
+
         fs.writeFileSync('prices.json', JSON.stringify(cleanData, null, 2));
         fs.writeFileSync('prices.js', 'window.LIVE_PRICES = ' + JSON.stringify(cleanData, null, 2) + ';');
-        console.log('Successfully saved to prices.json and prices.js!');
+        console.log('Successfully saved (Forced Order Applied)!');
       } else {
         console.error("No results found or error:", payload);
       }
@@ -111,9 +126,5 @@ req.on('error', (error) => {
   console.error(error);
 });
 
-req.write(JSON.stringify({
-  sorts: [
-    { property: 'Name', direction: 'ascending' }
-  ]
-}));
+req.write(JSON.stringify({}));
 req.end();

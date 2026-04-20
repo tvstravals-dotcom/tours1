@@ -228,6 +228,7 @@
                   <option>Sedan (Dzire/Etios)</option>
                   <option>SUV (Innova/Xylo)</option>
                   <option>Tempo Traveller</option>
+                  <option>Non AC Coach Bus</option>
                 </select>
               </div>
             </div>
@@ -339,191 +340,184 @@
             >
           </div>
 
-          <!-- Vehicle Tariff Cards -->
           <div class="tariff-cards-grid" id="tariff-cards-container">
+            <!-- 1. Mini -->
             <div class="tariff-vehicle-card" id="tv-mini">
-              <div class="tvc-image">
-                <img
-                  src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=500&q=80"
-                  alt="Mini Cab"
-                  loading="lazy"
-                />
-              </div>
+              <div class="tvc-image"><img src="images/tariff_mini_lux.png" alt="Mini Cab" /></div>
               <div class="tvc-body">
-                <h3 class="tvc-title">
-                  <i class="fas fa-car-side"></i> Mini Cab
-                </h3>
-                <p class="tvc-subtitle">
-                  Indica / Vista &nbsp;&bull;&nbsp; Upto 4 Passengers
-                </p>
+                <h3 class="tvc-title"><i class="fas fa-car-side"></i> Mini</h3>
+                <p class="tvc-subtitle">Indica / Vista &bull; 4+1 Seater</p>
                 <div class="tvc-tier">
-                  <div class="tvc-tier-label">
-                    <i class="fas fa-road"></i> Below 300 km / Day
-                  </div>
-                  <div class="tvc-row">
-                    <span>Rent Per Day</span
-                    ><strong id="mini-rent">&#8377;1,300</strong>
-                  </div>
-                  <div class="tvc-row">
-                    <span>Per KM Charge</span
-                    ><strong id="mini-km1">&#8377;8/km</strong>
-                  </div>
+                  <div class="tvc-tier-label"><i class="fas fa-road"></i> BELOW 250 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Rent Per Day</span><strong>&#8377; 1500/-</strong></div>
+                  <div class="tvc-row"><span>Fuel Charge Per km</span><strong>&#8377;10/-</strong></div>
                 </div>
                 <div class="tvc-tier tvc-tier-alt">
-                  <div class="tvc-tier-label">
-                    <i class="fas fa-tachometer-alt"></i> Above 300 km / Day
-                  </div>
-                  <div class="tvc-row">
-                    <span>Per KM Charge</span
-                    ><strong id="mini-km2">&#8377;11/km</strong>
-                  </div>
-                  <div class="tvc-row">
-                    <span>Driver Betta</span
-                    ><strong id="mini-driver">&#8377;200/day</strong>
-                  </div>
+                  <div class="tvc-tier-label"><i class="fas fa-tachometer-alt"></i> ABOVE 250 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Per Day km</span><strong>&#8377;11/-</strong></div>
+                  <div class="tvc-row"><span>Driver Betta</span><strong>&#8377;300/-</strong></div>
                 </div>
-                <a href="#enquiry" class="tvc-book-btn" id="tv-mini-btn"
-                  ><i class="fas fa-calendar-check"></i> Book Now</a
-                >
+                <a href="#enquiry" class="tvc-book-btn">Book Now</a>
               </div>
             </div>
 
+            <!-- 2. Sedan -->
             <div class="tariff-vehicle-card" id="tv-sedan">
-              <div class="tvc-image">
-                <img
-                  src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?w=500&q=80"
-                  alt="Sedan"
-                  loading="lazy"
-                />
-              </div>
+              <div class="tvc-image"><img src="images/tariff_sedan_lux.png" alt="Sedan" /></div>
               <div class="tvc-body">
                 <h3 class="tvc-title"><i class="fas fa-car"></i> Sedan</h3>
-                <p class="tvc-subtitle">
-                  Dzire / Etios &nbsp;&bull;&nbsp; Upto 4 Passengers
-                </p>
+                <p class="tvc-subtitle">Dzire / Etios &bull; 4+1 Seater</p>
                 <div class="tvc-tier">
-                  <div class="tvc-tier-label">
-                    <i class="fas fa-road"></i> Below 300 km / Day
-                  </div>
-                  <div class="tvc-row">
-                    <span>Rent Per Day</span
-                    ><strong id="sedan-rent">&#8377;1,500</strong>
-                  </div>
-                  <div class="tvc-row">
-                    <span>Per KM Charge</span
-                    ><strong id="sedan-km1">&#8377;9/km</strong>
-                  </div>
+                  <div class="tvc-tier-label"><i class="fas fa-road"></i> BELOW 250 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Rent Per Day</span><strong>&#8377; 1600/-</strong></div>
+                  <div class="tvc-row"><span>Fuel Charge Per km</span><strong>&#8377;11/-</strong></div>
                 </div>
                 <div class="tvc-tier tvc-tier-alt">
-                  <div class="tvc-tier-label">
-                    <i class="fas fa-tachometer-alt"></i> Above 300 km / Day
-                  </div>
-                  <div class="tvc-row">
-                    <span>Per KM Charge</span
-                    ><strong id="sedan-km2">&#8377;13/km</strong>
-                  </div>
-                  <div class="tvc-row">
-                    <span>Driver Betta</span
-                    ><strong id="sedan-driver">&#8377;250/day</strong>
-                  </div>
+                  <div class="tvc-tier-label"><i class="fas fa-tachometer-alt"></i> ABOVE 250 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Per Day km</span><strong>&#8377;13/-</strong></div>
+                  <div class="tvc-row"><span>Driver Betta</span><strong>&#8377;300/-</strong></div>
                 </div>
-                <a href="#enquiry" class="tvc-book-btn" id="tv-sedan-btn"
-                  ><i class="fas fa-calendar-check"></i> Book Now</a
-                >
+                <a href="#enquiry" class="tvc-book-btn">Book Now</a>
               </div>
             </div>
 
-            <div class="tariff-vehicle-card" id="tv-suv">
-              <div class="tvc-image">
-                <img
-                  src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=500&q=80"
-                  alt="SUV"
-                  loading="lazy"
-                />
-              </div>
+            <!-- 3. SUV (Tavera A/C) -->
+            <div class="tariff-vehicle-card" id="tv-tavera">
+              <div class="tvc-image"><img src="images/tariff_tavera_lux.png" alt="SUV Tavera" /></div>
               <div class="tvc-body">
-                <h3 class="tvc-title">
-                  <i class="fas fa-shuttle-van"></i> SUV / MUV
-                </h3>
-                <p class="tvc-subtitle">
-                  Innova / Xylo / Tavera &nbsp;&bull;&nbsp; Upto 7 Passengers
-                </p>
+                <h3 class="tvc-title"><i class="fas fa-shuttle-van"></i> SUV(Tavera A/C)</h3>
+                <p class="tvc-subtitle">Upto 7 Passengers &bull; Reliable</p>
                 <div class="tvc-tier">
-                  <div class="tvc-tier-label">
-                    <i class="fas fa-road"></i> Below 300 km / Day
-                  </div>
-                  <div class="tvc-row">
-                    <span>Rent Per Day</span
-                    ><strong id="suv-rent">&#8377;1,800</strong>
-                  </div>
-                  <div class="tvc-row">
-                    <span>Per KM Charge</span
-                    ><strong id="suv-km1">&#8377;11/km</strong>
-                  </div>
+                  <div class="tvc-tier-label"><i class="fas fa-road"></i> BELOW 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Rent Per Day</span><strong>&#8377; 2000/-</strong></div>
+                  <div class="tvc-row"><span>Fuel Charge Per km</span><strong>&#8377;12/-</strong></div>
                 </div>
                 <div class="tvc-tier tvc-tier-alt">
-                  <div class="tvc-tier-label">
-                    <i class="fas fa-tachometer-alt"></i> Above 300 km / Day
-                  </div>
-                  <div class="tvc-row">
-                    <span>Per KM Charge</span
-                    ><strong id="suv-km2">&#8377;16/km</strong>
-                  </div>
-                  <div class="tvc-row">
-                    <span>Driver Betta</span
-                    ><strong id="suv-driver">&#8377;300/day</strong>
-                  </div>
+                  <div class="tvc-tier-label"><i class="fas fa-tachometer-alt"></i> ABOVE 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Per Day km</span><strong>&#8377;16/-</strong></div>
+                  <div class="tvc-row"><span>Driver Betta</span><strong>&#8377;400/-</strong></div>
                 </div>
-                <a href="#enquiry" class="tvc-book-btn" id="tv-suv-btn"
-                  ><i class="fas fa-calendar-check"></i> Book Now</a
-                >
+                <a href="#enquiry" class="tvc-book-btn">Book Now</a>
               </div>
             </div>
 
-            <div class="tariff-vehicle-card" id="tv-tempo">
-              <div class="tvc-image">
-                <img
-                  src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=500&q=80"
-                  alt="Tempo Traveller"
-                  loading="lazy"
-                />
-              </div>
+            <!-- 4. SUV (Innova A/C) -->
+            <div class="tariff-vehicle-card" id="tv-innova">
+              <div class="tvc-image"><img src="images/tariff_innova_ac_lux.png" alt="SUV Innova" /></div>
               <div class="tvc-body">
-                <h3 class="tvc-title">
-                  <i class="fas fa-bus"></i> Tempo Traveller
-                </h3>
-                <p class="tvc-subtitle">
-                  12 / 14 / 17 Seater &nbsp;&bull;&nbsp; Upto 17 Passengers
-                </p>
+                <h3 class="tvc-title"><i class="fas fa-shuttle-van"></i> SUV (Innova A/C)</h3>
+                <p class="tvc-subtitle">Upto 7 Passengers &bull; Comfort</p>
                 <div class="tvc-tier">
-                  <div class="tvc-tier-label">
-                    <i class="fas fa-road"></i> Below 300 km / Day
-                  </div>
-                  <div class="tvc-row">
-                    <span>Rent Per Day</span
-                    ><strong id="tempo-rent">&#8377;2,500</strong>
-                  </div>
-                  <div class="tvc-row">
-                    <span>Per KM Charge</span
-                    ><strong id="tempo-km1">&#8377;16/km</strong>
-                  </div>
+                  <div class="tvc-tier-label"><i class="fas fa-road"></i> BELOW 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Rent Per Day</span><strong>&#8377; 2200/-</strong></div>
+                  <div class="tvc-row"><span>Fuel Charge Per km</span><strong>&#8377;13/-</strong></div>
                 </div>
                 <div class="tvc-tier tvc-tier-alt">
-                  <div class="tvc-tier-label">
-                    <i class="fas fa-tachometer-alt"></i> Above 300 km / Day
-                  </div>
-                  <div class="tvc-row">
-                    <span>Per KM Charge</span
-                    ><strong id="tempo-km2">&#8377;20/km</strong>
-                  </div>
-                  <div class="tvc-row">
-                    <span>Driver Betta</span
-                    ><strong id="tempo-driver">&#8377;400/day</strong>
-                  </div>
+                  <div class="tvc-tier-label"><i class="fas fa-tachometer-alt"></i> ABOVE 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Per Day km</span><strong>&#8377;17/-</strong></div>
+                  <div class="tvc-row"><span>Driver Betta</span><strong>&#8377;500/-</strong></div>
                 </div>
-                <a href="#enquiry" class="tvc-book-btn" id="tv-tempo-btn"
-                  ><i class="fas fa-calendar-check"></i> Book Now</a
-                >
+                <a href="#enquiry" class="tvc-book-btn">Book Now</a>
+              </div>
+            </div>
+
+            <!-- 5. SUV (Innova Crysta) -->
+            <div class="tariff-vehicle-card" id="tv-crysta">
+              <div class="tvc-image"><img src="images/tariff_innova_crysta_lux.png" alt="Innova Crysta" /></div>
+              <div class="tvc-body">
+                <h3 class="tvc-title"><i class="fas fa-gem"></i> SUV (Innova Crysta)</h3>
+                <p class="tvc-subtitle">Upto 7 Passengers &bull; Premium</p>
+                <div class="tvc-tier">
+                  <div class="tvc-tier-label"><i class="fas fa-road"></i> BELOW 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Rent Per Day</span><strong>&#8377; 2600/-</strong></div>
+                  <div class="tvc-row"><span>Fuel Charge Per km</span><strong>&#8377;17/-</strong></div>
+                </div>
+                <div class="tvc-tier tvc-tier-alt">
+                  <div class="tvc-tier-label"><i class="fas fa-tachometer-alt"></i> ABOVE 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Per Day km</span><strong>&#8377;22/-</strong></div>
+                  <div class="tvc-row"><span>Driver Betta</span><strong>&#8377;500/-</strong></div>
+                </div>
+                <a href="#enquiry" class="tvc-book-btn">Book Now</a>
+              </div>
+            </div>
+
+            <!-- 6. Tempo 14 seater -->
+            <div class="tariff-vehicle-card" id="tv-tempo-14">
+              <div class="tvc-image"><img src="images/tariff_tempo_14_lux.png" alt="Tempo 14 Seater" /></div>
+              <div class="tvc-body">
+                <h3 class="tvc-title"><i class="fas fa-bus"></i> Tempo 14 seater</h3>
+                <p class="tvc-subtitle">Upto 14 Passengers &bull; Group</p>
+                <div class="tvc-tier">
+                  <div class="tvc-tier-label"><i class="fas fa-road"></i> BELOW 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Rent Per Day</span><strong>&#8377; 2600/-</strong></div>
+                  <div class="tvc-row"><span>Fuel Charge Per km</span><strong>&#8377;16/-</strong></div>
+                </div>
+                <div class="tvc-tier tvc-tier-alt">
+                  <div class="tvc-tier-label"><i class="fas fa-tachometer-alt"></i> ABOVE 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Per Day km</span><strong>&#8377;22/-</strong></div>
+                  <div class="tvc-row"><span>Driver Betta</span><strong>&#8377;500/-</strong></div>
+                </div>
+                <a href="#enquiry" class="tvc-book-btn">Book Now</a>
+              </div>
+            </div>
+
+            <!-- 7. Tempo 18 seater -->
+            <div class="tariff-vehicle-card" id="tv-tempo-18">
+              <div class="tvc-image"><img src="images/tariff_tempo_18_lux.png" alt="Tempo 18 Seater" /></div>
+              <div class="tvc-body">
+                <h3 class="tvc-title"><i class="fas fa-bus"></i> Tempo 18 seater</h3>
+                <p class="tvc-subtitle">Upto 18 Passengers &bull; Large Group</p>
+                <div class="tvc-tier">
+                  <div class="tvc-tier-label"><i class="fas fa-road"></i> BELOW 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Rent Per Day</span><strong>&#8377; 2600/-</strong></div>
+                  <div class="tvc-row"><span>Fuel Charge Per km</span><strong>&#8377;16/-</strong></div>
+                </div>
+                <div class="tvc-tier tvc-tier-alt">
+                  <div class="tvc-tier-label"><i class="fas fa-tachometer-alt"></i> ABOVE 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Per Day km</span><strong>&#8377;22/-</strong></div>
+                  <div class="tvc-row"><span>Driver Betta</span><strong>&#8377;500/-</strong></div>
+                </div>
+                <a href="#enquiry" class="tvc-book-btn">Book Now</a>
+              </div>
+            </div>
+
+            <!-- 8. 21 Seater 407 Coach A/C -->
+            <div class="tariff-vehicle-card" id="tv-coach-ac">
+              <div class="tvc-image"><img src="images/tariff_coach_ac_lux.png" alt="Coach 407 A/C" /></div>
+              <div class="tvc-body">
+                <h3 class="tvc-title"><i class="fas fa-bus-alt"></i> 21  Seater 407 Coach A/C</h3>
+                <p class="tvc-subtitle">Upto 21 Passengers &bull; Luxury</p>
+                <div class="tvc-tier">
+                  <div class="tvc-tier-label"><i class="fas fa-road"></i> BELOW 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Rent Per Day</span><strong>&#8377; 5500/-</strong></div>
+                  <div class="tvc-row"><span>Fuel Charge Per km</span><strong>&#8377;25/-</strong></div>
+                </div>
+                <div class="tvc-tier tvc-tier-alt">
+                  <div class="tvc-tier-label"><i class="fas fa-tachometer-alt"></i> ABOVE 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Per Day km</span><strong>&#8377;35/-</strong></div>
+                  <div class="tvc-row"><span>Driver Betta</span><strong>&#8377;1000/-</strong></div>
+                </div>
+                <a href="#enquiry" class="tvc-book-btn">Book Now</a>
+              </div>
+            </div>
+
+            <!-- 9. 21 Seater Coach non A/C -->
+            <div class="tariff-vehicle-card" id="tv-coach-nonac">
+              <div class="tvc-image"><img src="images/tariff_coach_nonac_lux.png" alt="Coach Non A/C" /></div>
+              <div class="tvc-body">
+                <h3 class="tvc-title"><i class="fas fa-bus-alt"></i> 21 Seater Coach non A/C</h3>
+                <p class="tvc-subtitle">Upto 21 Passengers &bull; Affordable</p>
+                <div class="tvc-tier">
+                  <div class="tvc-tier-label"><i class="fas fa-road"></i> BELOW 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Rent Per Day</span><strong>&#8377; 4500/-</strong></div>
+                  <div class="tvc-row"><span>Fuel Charge Per km</span><strong>&#8377;20/-</strong></div>
+                </div>
+                <div class="tvc-tier tvc-tier-alt">
+                  <div class="tvc-tier-label"><i class="fas fa-tachometer-alt"></i> ABOVE 300 KM (PER DAY)</div>
+                  <div class="tvc-row"><span>Per Day km</span><strong>&#8377;30/-</strong></div>
+                  <div class="tvc-row"><span>Driver Betta</span><strong>&#8377;1000/-</strong></div>
+                </div>
+                <a href="#enquiry" class="tvc-book-btn">Book Now</a>
               </div>
             </div>
           </div>
@@ -617,11 +611,11 @@
               </div>
             </div>
 
-            <!-- 4. TVM & Madurai -->
+            <!-- 4. Madurai Temples -->
             <div class="package-card" id="pkg-4">
               <div class="package-image card-slider">
                 <div class="slider-track">
-                  <img src="images/pkg_temple.png" alt="Thiruvananthapuram" class="card-slide active" />
+                  <img src="images/pkg_temple.png" alt="Madurai" class="card-slide active" />
                   <img src="images/svc_temple.png" alt="Thiruparankundram" class="card-slide" />
                   <img src="images/svc_local.png" alt="Alagar Kovil" class="card-slide" />
                 </div>
@@ -631,13 +625,13 @@
                 </div>
               </div>
               <div class="package-info">
-                <h3>Thiruvananthapuram – Madurai Thiruparankundram – Alagar Kovil</h3>
+                <h3>Madurai Thiruparankundram – Alagar Kovil</h3>
                 <p>Discover temples, culture, and spiritual heritage.</p>
                 <div class="package-highlights">
                   <span>📍 South India</span>
                 </div>
                 <div class="package-footer">
-                  <a href="#enquiry" class="btn btn-primary btn-block" onclick="document.getElementById('enq-to').value='Thiruvananthapuram – Madurai Thiruparankundram – Alagar Kovil';">👉 Book Now</a>
+                  <a href="#enquiry" class="btn btn-primary btn-block" onclick="document.getElementById('enq-to').value='Madurai Thiruparankundram – Alagar Kovil';">👉 Book Now</a>
                 </div>
               </div>
             </div>
@@ -696,9 +690,9 @@
             <div class="package-card" id="pkg-7">
               <div class="package-image card-slider">
                 <div class="slider-track">
-                  <img src="images/pkg_tirupati.png" alt="Tirupati Balaji" class="card-slide active" />
-                  <img src="images/pkg_andhra.png" alt="Srisailam Temple" class="card-slide" />
-                  <img src="images/pkg_rameswaram.png" alt="Ahobilam Shrine" class="card-slide" />
+                  <img src="images/pkg_andhra_tirupati.png" alt="Tirupati Balaji" class="card-slide active" />
+                  <img src="images/pkg_andhra_srisailam.png" alt="Srisailam Mallikarjuna Swamy" class="card-slide" />
+                  <img src="images/pkg_andhra_ahobilam.png" alt="Ahobilam Narasimha Swamy" class="card-slide" />
                 </div>
                 <div class="slider-controls">
                   <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
@@ -821,9 +815,9 @@
             <div class="package-card" id="pkg-12">
               <div class="package-image card-slider">
                 <div class="slider-track">
-                  <img src="images/pkg_thanjavur.png" alt="Thanjavur Big Temple" class="card-slide active" />
-                  <img src="images/svc_temple.png" alt="Srirangam Temple" class="card-slide" />
-                  <img src="images/svc_local.png" alt="Kumbakonam Temple" class="card-slide" />
+                  <img src="images/pkg_thanjavur_periya.png" alt="Thanjavur Periya Kovil" class="card-slide active" />
+                  <img src="images/pkg_srirangam_temple.png" alt="Srirangam Temple" class="card-slide" />
+                  <img src="images/pkg_brihadeeswarar_alt.png" alt="Brihadeeswarar Temple" class="card-slide" />
                 </div>
                 <div class="slider-controls">
                   <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
@@ -1227,6 +1221,7 @@
                       <option>Sedan (Dzire/Etios)</option>
                       <option>SUV (Innova/Xylo)</option>
                       <option>Tempo Traveller</option>
+                      <option>Non AC Coach Bus</option>
                     </select>
                   </div>
                 </div>
