@@ -1786,6 +1786,29 @@ textarea {
   grid-template-columns: 1.2fr 1.3fr 1fr 1fr;
   gap: 40px;
 }
+/* Service Areas Grid */
+.footer-areas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.footer-areas li {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  border-bottom: none !important;
+  padding: 0 !important;
+}
+
+.footer-areas li i {
+  color: var(--primary);
+  font-size: 0.75rem;
+}
+
 .footer-policy {
   list-style: none;
   display: flex;
