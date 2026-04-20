@@ -449,6 +449,7 @@ textarea {
   flex-direction: column;
   gap: 5px;
   padding: 4px;
+  z-index: 2500; /* Ensure above drawer (2000) */
 }
 .hamburger span {
   display: block;
@@ -457,19 +458,20 @@ textarea {
   background: #fff;
   border-radius: 2px;
   transition: var(--transition);
-  z-index: 1001; /* Ensure above drawer */
 }
 .mobile-only {
   display: none;
 }
 .hamburger.open span:nth-child(1) {
   transform: rotate(45deg) translate(3px, 5px);
+  background: var(--secondary);
 }
 .hamburger.open span:nth-child(2) {
   opacity: 0;
 }
 .hamburger.open span:nth-child(3) {
   transform: rotate(-45deg) translate(3px, -5px);
+  background: var(--secondary);
 }
 
 /* =============================================
@@ -2082,14 +2084,37 @@ textarea {
     width: 300px;
     background: #0f172a; /* Solid Midnight Blue */
     flex-direction: column;
-    padding: 110px 40px 40px;
+    padding: 100px 30px 40px;
     gap: 0;
     box-shadow: -15px 0 45px rgba(0, 0, 0, 0.4);
     transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 2000; /* Higher than everything */
+    z-index: 2000;
     opacity: 1;
     pointer-events: all;
     display: flex !important;
+    overflow-y: auto;
+  }
+  
+  /* Remove dark box error when menu is open */
+  body.menu-open .header.scrolled .navbar {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border-bottom-color: transparent;
+  }
+  
+  /* Mobile Menu Header - Brand emphasis inside drawer */
+  .nav-links::before {
+    content: "TVS TOURS & TRAVELS";
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--secondary);
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding-bottom: 10px;
+    width: calc(100% - 60px);
   }
   .nav-links.open {
     right: 0;
