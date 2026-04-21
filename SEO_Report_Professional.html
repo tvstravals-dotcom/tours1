@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Completion Report - TVS Tours & Travels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #d4af37;
+            --gold-light: #f4e4bc;
+            --text: #334155;
+            --white: #ffffff;
+            --bg: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .report-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Certificate Border Decor */
+        .report-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 2px solid var(--gold-light);
+            border-radius: 15px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo-area {
+            margin-bottom: 20px;
+        }
+
+        .logo-area img {
+            height: 80px;
+            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 5px 20px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 15px;
+        }
+
+        .content {
+            padding: 50px 60px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--bg);
+            padding-bottom: 10px;
+        }
+
+        .section-title i {
+            color: var(--accent);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--bg);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .card h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        .keyword-pill {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin: 4px;
+        }
+
+        .strategy-box {
+            background: linear-gradient(135deg, var(--primary), #1e293b);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .strategy-box h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .strategy-list {
+            list-style: none;
+        }
+
+        .strategy-list li {
+            margin-bottom: 12px;
+            display: flex;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+
+        .strategy-list li i {
+            color: var(--accent);
+            margin-top: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #f1f5f9;
+            font-size: 0.85rem;
+        }
+
+        .controls {
+            max-width: 900px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-print {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-print:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+        @media print {
+            .controls { display: none; }
+            body { padding: 0; background: white; }
+            .report-wrapper { box-shadow: none; border: none; }
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            .content { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <button class="btn btn-print" onclick="window.print()">
+            <i class="fas fa-file-pdf"></i> Save as PDF / Print
+        </button>
+    </div>
+
+    <div class="report-wrapper">
+        <header>
+            <div class="logo-area">
+                <img src="images/tvs_main_logo.png" alt="TVS Logo">
+            </div>
+            <h1>SEO Performance Report</h1>
+            <p>Prepared for: <strong>Mr. Manikandan M</strong></p>
+            <div class="status-badge">✅ Optimization Active</div>
+        </header>
+
+        <div class="content">
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-rocket"></i> Project Summary
+                </div>
+                <p>The TVS Tours & Travels ecosystem has been enhanced with enterprise-level SEO architecture. This setup ensures your fleet and travel packages are prioritized by Google when local or outstation customers search from Madurai.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-gears"></i> Technical Work Completed
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Google Search Console</h4>
+                        <p>Verified ownership and submitted sitemaps for instant indexing of all pages.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Schema Markup</h4>
+                        <p>Injected JSON-LD code to show your star ratings and phone number on Google.</p>
+                    </div>
+                    <div class="card">
+                        <h4>XML & Robots</h4>
+                        <p>Automated crawler maps submitted to ensure Google reads your site daily.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Meta-Optimization</h4>
+                        <p>Custom titles and descriptions meticulously crafted for "Click-to-Call" results.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-magnifying-glass-location"></i> Target Search Terms
+                </div>
+                <div class="keyword-area">
+                    <span class="keyword-pill">Madurai Cabs</span>
+                    <span class="keyword-pill">Cab Booking Madurai</span>
+                    <span class="keyword-pill">Outstation Taxi Madurai</span>
+                    <span class="keyword-pill">Best Travels in Madurai</span>
+                    <span class="keyword-pill">Online Booking Madurai</span>
+                    <span class="keyword-pill">TVS tours and travels</span>
+                </div>
+            </div>
+
+            <div class="strategy-box">
+                <h3>🚀 Roadmap to Rank #1</h3>
+                <p style="margin-bottom: 15px; font-size: 0.9rem; opacity: 0.9;">To maintain market dominance and outrank competitors, follow these steps:</p>
+                <ul class="strategy-list">
+                    <li><i class="fas fa-star"></i> <strong>Google Reviews:</strong> Aim for 5 reviews per week. Google prioritizes active feedback above all else.</li>
+                    <li><i class="fas fa-camera"></i> <strong>Live Stories:</strong> Share real photos of your SUVs and Tempo Travelers at tour spots like Ooty and Rameshwaram.</li>
+                    <li><i class="fas fa-phone-volume"></i> <strong>WhatsApp Engagement:</strong> Quick responses to enquiries tell Google your service is highly relevant.</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>TVS TOURS & TRAVELS</strong></p>
+            <p>Madurai, Tamil Nadu | Manikandan M (+91 91503 06264)</p>
+            <p style="margin-top: 10px; font-size: 0.7rem; opacity: 0.6;">&copy; 2026 Digital Optimization Services. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
